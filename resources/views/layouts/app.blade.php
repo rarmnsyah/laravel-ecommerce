@@ -29,7 +29,7 @@
                             <div id="news-flash" class="d-inline-block">
                                 <ul>
                                     <li>Diskon Laptop 90% <a href="shop.html">View details</a></li>
-                                    <li></li>
+                                    <li>Bayar Saya Sekarang Hanya 20rb</li>
                                     <li>Joki Ngoding By One Get One <a href="shop.html">Pesan Sekarang</a>
                                     </li>
                                 </ul>
@@ -64,7 +64,7 @@
                 <div class="container">
                     <div class="header-wrap">
                         <div class="logo logo-width-1">
-                            <a href="/"><img src="{{ asset('assets/imgs/logo/logo.png') }}" alt="logo"></a>
+                            <a href="/"><img src="{{ asset('assets/imgs/logo/ytta2.png') }}" alt="logo"></a>
                         </div>
                         <div class="header-right">
                             @livewire('header-search-component')
@@ -712,7 +712,7 @@
                                     <div class="col-md-8 col-lg-12">
                                         <p class="wow fadeIn animated">From App Store or Google Play</p>
                                         <div class="download-app wow fadeIn animated mob-app">
-                                            <a href="#" class="hover-up mb-sm-4 mb-lg-0"><img class="active"
+                                            <a href="#" class="hover-up mb-sm-4 mb-lg-0"><img 
                                                     src="assets/imgs/theme/app-store.jpg" alt=""></a>
                                             <a href="#" class="hover-up"><img src="assets/imgs/theme/google-play.jpg"
                                                     alt=""></a>
