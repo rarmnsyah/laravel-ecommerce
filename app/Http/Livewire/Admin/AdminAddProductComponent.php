@@ -24,6 +24,7 @@ class AdminAddProductComponent extends Component
     public $quantity;
     public $image;
     public $category_id;
+    public $user_id;
 
     public function generateSlug(){
         $this->slug = Str::slug($this->name);
@@ -42,8 +43,9 @@ class AdminAddProductComponent extends Component
             'featured'=>'required',
             'quantity'=>'required',
             'image'=>'required',
-            'category_id'=>'required'
+            'category_id'=>'required',
         ]);
+        $this->user_id = auth()->user()->id;
         $product = new Product();
         $product->name = $this->name;
         $product->slug = $this->slug;
@@ -59,6 +61,7 @@ class AdminAddProductComponent extends Component
         $this->image->storeAs('products',$imageName);
         $product->image = $imageName;
         $product->category_id = $this->category_id;
+        $product->user_id = $this->user_id;
         $product->save();
         session()->flash('message', 'Product has been adeed!');
     }

@@ -53,19 +53,21 @@
                                             $i = ($products->currentPage()-1)*$products->perPage();
                                         @endphp
                                         @foreach($products as $product)
-                                            <tr>
-                                                <td>{{++$i}}</td>
-                                                <td><img src="{{ asset('assets/imgs/products')}}/{{$product->image}}" alt="{{$product->name}}" width="60" /></td>
-                                                <td>{{$product->name}}</td>
-                                                <td>{{$product->stock_status}}</td>
-                                                <td>{{$product->regular_price}}</td>
-                                                <td>{{$product->category->name}}</td>
-                                                <td>{{$product->created_at}}</td>
-                                                <td>
-                                                    <a href="{{ route('admin.product.edit', ['product_id'=>$product->id])}}" class="text-info">Edit</a>
-                                                    <a href="#" onclick="deleteConfirmation({{$product->id}})" class="text-danger">Delete</a>
-                                                </td>
-                                            </tr>
+                                            @if ($product->user_id == auth()->user()->id)
+                                                <tr>
+                                                    <td>{{++$i}}</td>
+                                                    <td><img src="{{ asset('assets/imgs/products')}}/{{$product->image}}" alt="{{$product->name}}" width="60" /></td>
+                                                    <td>{{$product->name}}</td>
+                                                    <td>{{$product->stock_status}}</td>
+                                                    <td>{{$product->regular_price}}</td>
+                                                    <td>{{$product->category->name}}</td>
+                                                    <td>{{$product->created_at}}</td>
+                                                    <td>
+                                                        <a href="{{ route('admin.product.edit', ['product_id'=>$product->id])}}" class="text-info">Edit</a>
+                                                        <a href="#" onclick="deleteConfirmation({{$product->id}})" class="text-danger">Delete</a>
+                                                    </td>
+                                                </tr>
+                                            @endif
                                         @endforeach
                                     </tebody>
                                 </table>

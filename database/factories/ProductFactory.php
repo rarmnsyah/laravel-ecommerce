@@ -30,7 +30,8 @@ class ProductFactory extends Factory
             'stock_status' => 'instock',
             'quantity' => $this->faker->numberBetween(10,50),
             'image' => 'product-'.$this->faker->numberBetween(1,16),
-            'category_id' => $this->faker->numberBetween(1,5)
+            'category_id' => $this->faker->numberBetween(1,5),
+            'user_id' => $this->faker->numberBetween(1,2)
         ];
     }
 }
