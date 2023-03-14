@@ -1,25 +1,26 @@
 <?php
 
-use App\Http\Livewire\Admin\AdminAddCategoryComponent;
-use App\Http\Livewire\Admin\AdminCategoriesComponent;
-use App\Http\Livewire\Admin\AdminDashboardComponent;
-use App\Http\Livewire\Admin\AdminEditCategoryComponent;
-use App\Http\Livewire\Admin\AdminProductComponent;
-use App\Http\Livewire\Admin\AdminAddProductComponent;
-use App\Http\Livewire\Admin\AdminEditProductComponent;
-use App\Http\Livewire\Admin\AdminHomeSliderComponent;
-use App\Http\Livewire\Admin\AdminAddHomeSlideComponent;
-use App\Http\Livewire\Admin\AdminEditHomeSlideComponent;
 use App\Http\Livewire\CartComponent;
+use App\Http\Livewire\HomeComponent;
+use App\Http\Livewire\ShopComponent;
+use Illuminate\Support\Facades\Route;
+use App\Http\Livewire\SearchComponent;
+use App\Http\Livewire\DetailsComponent;
 use App\Http\Livewire\CategoryComponent;
 use App\Http\Livewire\CheckoutComponent;
-use App\Http\Livewire\DetailsComponent;
-use App\Http\Livewire\HomeComponent;
-use App\Http\Livewire\SearchComponent;
-use App\Http\Livewire\ShopComponent;
-use App\Http\Livewire\User\UserDashboardComponent;
 use App\Http\Livewire\WishlistComponent;
-use Illuminate\Support\Facades\Route;
+use App\Http\Livewire\User\UserDaftarComponent;
+use App\Http\Livewire\Admin\AdminProductComponent;
+use App\Http\Livewire\User\UserDashboardComponent;
+use App\Http\Livewire\Admin\AdminDashboardComponent;
+use App\Http\Livewire\Admin\AdminAddProductComponent;
+use App\Http\Livewire\Admin\AdminCategoriesComponent;
+use App\Http\Livewire\Admin\AdminHomeSliderComponent;
+use App\Http\Livewire\Admin\AdminAddCategoryComponent;
+use App\Http\Livewire\Admin\AdminEditProductComponent;
+use App\Http\Livewire\Admin\AdminAddHomeSlideComponent;
+use App\Http\Livewire\Admin\AdminEditCategoryComponent;
+use App\Http\Livewire\Admin\AdminEditHomeSlideComponent;
 
 /*
 |--------------------------------------------------------------------------
@@ -58,6 +59,7 @@ Route::get('/search', SearchComponent::class)->name('product.search');
 
 Route::middleware(['auth'])->group(function(){
     Route::get('/user/dashboard', UserDashboardComponent::class)->name('user.dashboard');
+    Route::get('/user/daftar', UserDaftarComponent::class)->name('user.daftar');
 });
 
 Route::middleware(['auth', 'authadmin'])->group(function(){
