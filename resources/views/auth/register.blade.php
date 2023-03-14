@@ -27,12 +27,12 @@
                                             <div class="form-group">
                                                 <input type="text" required="" name="email" placeholder="Email" :value="old('email')" required>
                                             </div>
-                                            <div class="form-group">
+                                            {{-- <div class="form-group">
                                                 <button type="submit" class="btn btn-fill-out btn-block hover-up" name="token">Kirim Token</button>
                                             </div>
                                             <div class="form-group">
                                                 <input type="text" required="" name="token" placeholder="Token" :value="old('token')" required>
-                                            </div>
+                                            </div> --}}
                                             <div class="form-group">
                                                 <input required="" type="password" name="password" placeholder="Password" required autocomplete="new-password">
                                             </div>
