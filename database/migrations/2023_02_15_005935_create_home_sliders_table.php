@@ -18,10 +18,10 @@ return new class extends Migration
             $table->string('top_title');
             $table->string('title');
             $table->string('sub_title');
-            $table->string('offer');
-            $table->string('link');
+            $table->string('offer')->nullable();
+            $table->string('link')->default('/');
             $table->string('image');
-            $table->string('status');
+            $table->string('status')->default(1);
             $table->timestamps();
         });
     }
