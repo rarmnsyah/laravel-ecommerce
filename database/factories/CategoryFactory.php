@@ -23,7 +23,7 @@ class CategoryFactory extends Factory
         return [
             'name' => $category_name,
             'slug' => $slug,
-            'image' => $image
+            'image' => 'categoriy-thumb'.$this->faker->numberBetween(1,8),
         ];
     }
 }

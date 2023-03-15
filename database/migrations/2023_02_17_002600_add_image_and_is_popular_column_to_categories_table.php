@@ -14,7 +14,8 @@ return new class extends Migration
     public function up()
     {
         Schema::table('categories', function (Blueprint $table) {
-            $table->string('image')->default(null);
+            $table->string('image');
+            $table->text('images')->nullable();
             $table->boolean('is_popular')->default(false);
         });
     }

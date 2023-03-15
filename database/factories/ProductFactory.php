@@ -29,7 +29,7 @@ class ProductFactory extends Factory
             'SKU' => 'PRD' . $this->faker->unique()->numberBetween(100,500),
             'stock_status' => 'instock',
             'quantity' => $this->faker->numberBetween(10,50),
-            'image' => 'product-'.$this->faker->numberBetween(1,16),
+            'image' => 'product-'.$this->faker->numberBetween(1,16).'.jpg',
             'category_id' => $this->faker->numberBetween(1,5),
             'user_id' => $this->faker->numberBetween(1,2)
         ];
