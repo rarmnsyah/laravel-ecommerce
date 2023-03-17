@@ -59,7 +59,7 @@ Route::get('/search', SearchComponent::class)->name('product.search');
 
 Route::middleware(['auth'])->group(function(){
     Route::get('/user/dashboard', UserDashboardComponent::class)->name('user.dashboard');
-    Route::get('/user/daftar', UserDaftarComponent::class)->name('user.daftar');
+    Route::get('/user/edit/{user_id}', UserDaftarComponent::class)->name('user.edit');
 });
 
 Route::middleware(['auth', 'authadmin'])->group(function(){

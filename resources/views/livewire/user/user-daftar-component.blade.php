@@ -11,12 +11,12 @@
                                     <div class="heading_s1">
                                         <h3 class="mb-30">Login</h3>
                                     </div>
-                                    <form method="post" action="{{ route('login') }}">
-                                        @csrf
-                                        <div class="form-group">
-                                            <button type="submit" class="btn btn-fill-out btn-block hover-up"
-                                                name="login">Log in</button>
+                                    @if (Session::has('message'))
+                                        <div class="alert alert-success" role="alert">{{ Session::get('message') }}
                                         </div>
+                                    @endif
+                                    <form wire:submit.prevent="updateUser">
+                                        <button type="submit" class="btn btn-primary float-end">Submit</button>
                                     </form>
                                 </div>
                             </div>

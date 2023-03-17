@@ -842,7 +842,8 @@
                                     </div>
                                 </div>
                                 <div class="product-content-wrap">
-                                    <h2><a href="product-details.html">{{$lproduct->name}}</a></h2>
+                                    {{-- <h2><a href="product-details.html">{{$lproduct->name}}</a></h2> --}}
+                                    <h2><a href="{{ route('product.details', ['slug'=>$lproduct->slug])}}">{{$lproduct->name}}</a></h2>
                                     <div class="rating-result" title="90%">
                                         <span>
                                         </span>

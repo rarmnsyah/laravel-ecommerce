@@ -4,9 +4,11 @@ namespace App\Http\Livewire;
 
 use App\Models\Category;
 use App\Models\Product;
+use Gloudemans\Shoppingcart\Facades\Cart;
 use Livewire\Component;
 use Livewire\WithPagination;
-use Cart;
+
+// use Cart;
 
 class ShopComponent extends Component
 {

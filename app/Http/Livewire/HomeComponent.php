@@ -7,7 +7,8 @@ use App\Models\HomeSlider;
 use App\Models\Product;
 use App\Models\Category;
 use Livewire\WithPagination;
-use Cart;
+use Gloudemans\Shoppingcart\Facades\Cart;
+
 
 class HomeComponent extends Component
 {

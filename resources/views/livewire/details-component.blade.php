@@ -90,13 +90,13 @@
                                         <div class="short-desc mb-30">
                                             <p>{{$product->short_description}}</p>
                                         </div>
-                                        <!-- <div class="product_sort_info font-xs mb-30">
+                                        {{-- <div class="product_sort_info font-xs mb-30">
                                             <ul>
                                                 <li class="mb-10"><i class="fi-rs-crown mr-5"></i> 1 Year AL Jazeera Brand Warranty</li>
                                                 <li class="mb-10"><i class="fi-rs-refresh mr-5"></i> 30 Day Return Policy</li>
                                                 <li><i class="fi-rs-credit-card mr-5"></i> Cash on Delivery available</li>
                                             </ul>
-                                        </div> -->
+                                        </div> --}}
                                         <div class="attr-detail attr-color mb-15">
                                             <strong class="mr-10">Color</strong>
                                             <ul class="list-filter color-filter">
@@ -127,7 +127,7 @@
                                                 <a href="#" class="qty-up"><i class="fi-rs-angle-small-up"></i></a>
                                             </div>
                                             <div class="product-extra-link2">
-                                                <button type="button" class="button button-add-to-cart" wire:click.prevent="store({{$product->id}},'{{$product->name}}',{{$product->regular_price}})">Add to cart</button>
+                                                <button type="button" class="button button-add-to-cart" wire:click.prevent="store({{auth()->user()->id}}, {{$product->id}}, '{{$product->name}}', {{$product->regular_price}})">Add to cart</button>
                                                 <a aria-label="Add To Wishlist" class="action-btn hover-up" href="wishlist.php"><i class="fi-rs-heart"></i></a>
                                                 <a aria-label="Compare" class="action-btn hover-up" href="compare.php"><i class="fi-rs-shuffle"></i></a>
                                             </div>

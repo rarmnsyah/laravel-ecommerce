@@ -3,7 +3,7 @@
 namespace App\Http\Livewire;
 
 use Livewire\Component;
-use Cart;
+use Gloudemans\Shoppingcart\Facades\Cart as Cart;
 class WishlistComponent extends Component
 {
     public function removeFromWishList($product_id){
